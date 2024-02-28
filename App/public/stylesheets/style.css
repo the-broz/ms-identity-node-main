@@ -1,0 +1,45 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #004b8d;
+  position: relative;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+}
+
+#user-actions {
+  float: right; 
+  display: block; 
+  background: #004078; 
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+}
+
+#user-actions a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+}
+
+a {
+  color: #00B7FF;
+}

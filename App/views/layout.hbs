@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/js/topbar.js' defer></script>
+    {{#if isAuthenticated}}
+    <script src='/js/requestGraphAPI.js'></script>
+    {{/if}}
+</head>
+
+<body>
+    <div class="topnav" id="topbar">
+    <img src="/images/logo_dark.svg" style="
+  float: left; 
+  height: 36px; 
+  margin-left: 15px; 
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;" onclick="window.location.pathname = '/';">
+  {{#if isAuthenticated}}
+  <a onclick="userActions()" style="float:right" id="user-action-holder">  <img src="{{avatar}}" style=" float: right; height: 36px; margin-left: -48px; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); cursor: pointer; border-radius: 100%">{{username}}</a>
+  {{else}}
+  <a href="/auth/signin" style="float:right">Sign in</a>
+  {{/if}}
+</div>
+<div id="user-actions" style="float: right; display:none">
+    <a href="/auth/signout">Sign out</a>
+  </div>
+    {{{body}}}
+</body>
+
+</html>
